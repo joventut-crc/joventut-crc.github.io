@@ -1,0 +1,96 @@
+// Mix-ins
+%padding-small {
+    padding: $padding-x-small $padding-x-small * 2;
+    @media (max-width: 1000px) {
+        padding: $padding-x-small $padding-x-small;
+    }
+}
+
+%padding-regular {
+    padding: $padding-small $padding-large;
+    @media (max-width: 1000px) {
+        padding: $padding-small * 1.5 $padding-large / 1.6;
+    }
+    @media (max-width: 576px) {
+        padding: $padding-small;
+    }
+}
+
+.header-txt-shadow {
+    text-shadow: 1px 1px 1px $text-shadow;
+}
+
+// Buttons
+.button {
+    border-radius: 0.3em;
+    border: 1px solid;
+    display: inline-block;
+    margin: 1em 0;
+    padding: 0.5em 0.75em;
+}
+
+a.button {
+    @extend .button-link;
+}
+
+.button-link {
+    &:hover {
+        background: $link-color;
+        border: 1px solid $link-color;
+        color: $background-color;
+        text-decoration: none;
+    }
+}
+
+.body-link {
+    &:hover {
+        text-decoration: underline;
+        color: darken($link-color, 15%);
+    }
+}
+
+.post-link {
+    &:hover {
+        text-decoration: none;
+        color: lighten($link-color, 10%);
+    }
+}
+
+// States
+.disabled {
+    opacity: 0.7;
+}
+
+// Custom
+.text-center {
+    text-align: center;
+}
+
+.right {
+    float: right;
+}
+
+.love {
+  display: inline-block;
+  position: relative;
+  top: .2em;
+  font-size: 1.4em;
+  color: #e74c3c;
+  -webkit-transform: scale(.9);
+  -moz-transform: scale(.9);
+  transform: scale(.9);
+  -webkit-animation: love .5s infinite linear alternate-reverse;
+  -moz-animation: love .5s infinite linear alternate-reverse;
+  animation: love .5s infinite linear alternate-reverse;
+}
+@-webkit-keyframes love {
+  to {-webkit-transform: scale(1.2);}
+}
+@-moz-keyframes love {
+  to {-moz-transform: scale(1.2);}
+}
+@keyframes love {
+  to {transform: scale(1.2);}
+}
+
+.embed-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }

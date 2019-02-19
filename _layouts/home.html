@@ -1,0 +1,100 @@
+---
+layout: default
+---
+
+<div class="home">
+  {% if site.theme_settings.header_text %}
+  <!-- Typed JS -->
+  <script src="{{ site.baseurl }}/assets/js/typed.js"></script>
+  <script type="application/javascript">
+      function load() {
+        var typed = new Typed('#typed', {
+            strings: ['Joves Sords <i>col·laborant entre tots</i>', 'Tots units','la unión hace la fuerza: Angel Calafell'],
+            typeSpeed: 0,
+            backSpeed: 0,
+            smartBackspace: true, // this is a default
+            loop: true
+        });
+      }
+      window.onload = load;
+  </script>
+  <div id="main" class="call-out"
+  style="background-image: url('{{ site.baseurl }}/{{ site.theme_settings.header_text_feature_image }}')">
+    {{ site.theme_settings.header_text }}
+      <span id="typed" style="white-space:pre;" class=" typed-fade-out"></span>
+  </div>
+  {% endif %}
+  
+  <div class="posts">
+    {% for post in paginator.posts %}
+    <div class="post-teaser">
+      {% if post.thumbnail %} 
+      <div class="post-img">
+         <img src="{{ site.baseurl }}/{{ post.thumbnail }}">
+      </div>
+      {% endif %}
+      <span>
+          <header>
+            <h1>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                {{ post.title }}
+              </a>
+            </h1>
+            <p class="meta">
+              {{ post.date | date: "%B %-d, %Y" }}
+            </p>
+          </header>
+          <div class="excerpt">
+              {{ post.excerpt | strip_html }}
+            <!--{{ post.content | strip_html | truncate: "250" }}-->
+            <!--<a class="button" href="{{ post.url | prepend: site.baseurl }}">
+              {{ site.theme_settings.str_continue_reading }}
+            </a>-->
+          </div>
+      </span>
+    </div>
+    {% endfor %}
+  </div>
+<!--
+<center>  
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v3.2';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-page" 
+     data-href="https://www.facebook.com/Joventut-de-Cerecusor-522535981426591"
+     data-tabs="timeline" 
+     data-width="500"
+     data-height="1500"
+     data-small-header="true" 
+     data-adapt-container-width="true" 
+     data-hide-cover="true" 
+     data-show-facepile="false">
+  <blockquote cite="https://www.facebook.com/Joventut-de-Cerecusor-522535981426591" 
+              class="fb-xfbml-parse-ignore">
+    <a href="https://www.facebook.com/Joventut-de-Cerecusor-522535981426591">Joventut de Cerecusor</a>
+  </blockquote>
+  </div>
+  </center>
+  !-->
+  {% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
+      <i class="fa fa-chevron-left"></i>
+      {{ site.theme_settings.str_previous_page }}
+    </a>
+    {% endif %}
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
+      {{ site.theme_settings.str_next_page }}
+      <i class="fa fa-chevron-right"></i>
+    </a>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>

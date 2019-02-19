@@ -1,0 +1,79 @@
+# SITE CONFIGURATION
+url: https://joventut-crc.github.io/ 
+baseurl: #
+title: Joventut CRC
+description: 
+
+# THEME-SPECIFIC CONFIGURATION
+theme_settings:
+  # Meta
+  title: Joventut CRC
+  avatar: assets/img/crc.png
+  favicon: assets/favicon.ico
+  gravatar: # Email MD5 hash
+
+  # Header and footer text
+  header_text: > #two or three lines to describe your site
+     <p>Joventut CERECUSOR</p>
+  header_text_feature_image: assets/img/joventut.jpeg
+  footer_text: >
+   Made with <span class="love">♥</span> by Guillermo Ferrer
+
+  # Icons
+  rss: true  # Make sure you created a feed.xml with feed.xml layout
+  email_address: # Full email address, e.g. "sam@example.com"
+  facebook: Joventut-de-Cerecusor-522535981426591
+  instagram: joventut_cerecusor
+  keybase:
+  linkedin:  # Full URL
+  pinterest:
+  youtube: cerecusor
+
+  # Scripts / Features 
+  google_analytics: UA-134766018-1
+  disqus_shortname:
+  katex: true # Enable if using math markup
+  portfolio: false
+  search: false
+  tags: false
+  
+  # Localization strings
+  str_follow_on: "Seguir-nos a"
+  str_rss_follow: "RSS feed"
+  str_email: "Email"
+  str_next_post: "Pròxima publicació"
+  str_previous_post: "Publicació anterior"
+  str_next_page: "Anterior"
+  str_previous_page: "Pròxim"
+  str_continue_reading: "Continua llegint"
+  str_javascript_required_disqus: "Activeu JavaScript per veure comentaris."
+
+  # Colours, typography and padding
+  # Open the "_sass > base" folder, and open "_variables.scss"
+  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
+
+  # Post navigation
+  post_navigation: true
+  
+
+# PAGINATION
+paginate: 5
+paginate_path: "blog/page:num"
+
+
+# PORTFOLIO
+collections:
+  portfolio:
+    output: false
+    permalink: /:collection/:name
+
+
+# BUILD SETTINGS
+markdown: kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: :compressed
+plugins: [jekyll-paginate, jekyll-seo-tag]
+#theme: type-on-strap # Uncomment if using the theme as a jekyll theme gem
+exclude: ["Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", "LICENSE", "README.md", "screenshot.png"]
