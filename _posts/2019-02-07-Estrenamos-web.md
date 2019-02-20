@@ -3,7 +3,7 @@ layout: post
 title:  "Estrenamos Web!!!!"
 ---
 
-**Estrenamos Web!**
+**Hoy se estrena la web del Joventut CRC**
 
 Hoy se estrena la web del Joventut CRC
 <center>
