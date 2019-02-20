@@ -5,9 +5,9 @@ title:  "Prueba videoencuestario"
 
 **Prueba de encuestario**
 
-Probando con Typeform
-
+<p>
 Typeform is a Barcelona-based online software as a service (SaaS) company that specializes in online form building and online surveys. Its main software creates dynamic forms based on user needs. Typeform's software has been used by Apple Inc., Airbnb, Uber and Nike
+</p>
 
 <center><a class="typeform-share button" href="https://guilleferrn.typeform.com/to/hlfUDV" data-mode="popup" style="display:inline-block;text-decoration:none;background-color:#94AE89;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:17px;line-height:42.5px;text-align:center;margin:0;height:42.5px;padding:0px 28px;border-radius:11px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-hide-headers="true" data-hide-footer="true" data-submit-close-delay="5" target="_blank">Empezar encuestario </a></center>
 
